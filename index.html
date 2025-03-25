@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математика для детей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Математика для детей</h1>
+        
+        <div class="settings">
+            <div class="difficulty">
+                <label for="difficulty-slider">Уровень сложности: <span id="difficulty-value">1</span></label>
+                <input type="range" id="difficulty-slider" min="1" max="5" value="1">
+                <div class="difficulty-description">
+                    <span>Легкий (0-10)</span>
+                    <span>Сложный (0-100)</span>
+                </div>
+            </div>
+            
+            <div class="operations">
+                <h3>Выберите тип задач:</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="addition" checked> Сложение (+)</label>
+                    <label><input type="checkbox" id="subtraction" checked> Вычитание (-)</label>
+                    <label><input type="checkbox" id="multiplication"> Умножение (×)</label>
+                    <label><input type="checkbox" id="division"> Деление (÷)</label>
+                </div>
+            </div>
+            
+            <button id="refresh-tasks" style="margin-top: 20px" class="btn">Обновить задачи</button>
+        </div>
+        
+        <div class="timer-section">
+            <div class="timer-display">
+                <span id="timer">30:00</span>
+                <div class="timer-progress">
+                    <div id="timer-bar"></div>
+                </div>
+            </div>
+            <div class="timer-controls">
+                <button id="start-timer" class="btn timer-btn">Старт</button>
+                <button id="pause-timer" class="btn timer-btn">Пауза</button>
+                <button id="reset-timer" class="btn timer-btn">Сброс</button>
+            </div>
+        </div>
+        
+        <div class="tasks-container">
+            <h2>Решите примеры:</h2>
+            <div id="tasks-list"></div>
+        </div>
+        
+        <div class="statistics">
+            <h2>Статистика:</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-label">Всего решено:</span>
+                    <span id="total-solved">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Правильно:</span>
+                    <span id="correct-solved">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Неправильно:</span>
+                    <span id="incorrect-solved">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
